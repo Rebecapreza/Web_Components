@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo com &lt;template&gt; e &lt;slot&gt;</title>
+</head>
+<body>
+
+  <h2>Componente com Template e Slot</h2>
+
+  <!-- Usando o elemento personalizado -->
+  <caixa-mensagem>
+    <strong>Aviso:</strong> Você tem uma nova notificação!
+  </caixa-mensagem>
+
+  <!-- Template oculto -->
+  <template id="template-mensagem">
+    <style>
+      .caixa {
+        padding: 10px;
+        background-color: #e3f2fd;
+        border: 1px solid #90caf9;
+        border-radius: 4px;
+        font-family: sans-serif;
+      }
+    </style>
+    <div class="caixa">
+      <slot></slot> <!-- Onde o conteúdo externo será inserido -->
+    </div>
+  </template>
+
+  <!-- Script do componente -->
+  <script src="caixa-mensagem.js"></script>
+
+</body>
+</html>
